@@ -4,13 +4,80 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>games</title>
+	<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+	<link rel="stylesheet" type="text/css" title="blue" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+	<link rel="alternate stylesheet" type="text/css" title="pink" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+	<link rel="alternate stylesheet" type="text/css" title="cyborg" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+	<link rel="alternate stylesheet" type="text/css" title="journal" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
+	<link rel="alternate stylesheet" type="text/css" title="flatly" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+	<link rel="alternate stylesheet" type="text/css" title="minty" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+
+    <title>SimonRedd | by Simon Lee</title>
   </head>
-  <body>
+  <body onload="set_style_from_cookie()">
     <noscript>
       <strong>We're sorry but games doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
+	</noscript>
+	
+	<script>
+	
+	// *** TO BE CUSTOMISED ***
+
+		var style_cookie_name = "style";
+		var style_cookie_duration = 2;
+		var style_domain = "thesitewizard.com";
+
+		// *** END OF CUSTOMISABLE SECTION ***
+
+		function switch_style(css_title) {
+			
+			// https://www.thesitewizard.com/javascripts/change-style-sheets.shtml
+			var i, link_tag;
+			for (i = 0, link_tag = document.getElementsByTagName("link");
+				i < link_tag.length; i++) {
+				if ((link_tag[i].rel.indexOf("stylesheet") != -1) &&
+					link_tag[i].title) {
+					link_tag[i].disabled = true;
+					if (link_tag[i].title == css_title) {
+						link_tag[i].disabled = false;
+					}
+				}
+				set_cookie(style_cookie_name, css_title,
+					style_cookie_duration, style_domain);
+			}
+		}
+		function set_style_from_cookie() {
+			var css_title = get_cookie(style_cookie_name);
+			if (css_title.length) {
+				switch_style(css_title);
+			}
+		}
+		function set_cookie(cookie_name, cookie_value,
+			lifespan_in_days, valid_domain) {
+			// https://www.thesitewizard.com/javascripts/cookies.shtml
+			var domain_string = valid_domain ?
+				("; domain=" + valid_domain) : '';
+			document.cookie = cookie_name +
+				"=" + encodeURIComponent(cookie_value) +
+				"; max-age=" + 60 * 60 *
+				24 * lifespan_in_days +
+				"; path=/" + domain_string;
+		}
+		function get_cookie(cookie_name) {
+			// https://www.thesitewizard.com/javascripts/cookies.shtml
+			var cookie_string = document.cookie;
+			if (cookie_string.length != 0) {
+				var cookie_array = cookie_string.split('; ');
+				for (i = 0; i < cookie_array.length; i++) {
+					cookie_value = cookie_array[i].match(cookie_name + '=(.*)');
+					if (cookie_value != null) {
+						return decodeURIComponent(cookie_value[1]);
+					}
+				}
+			}
+			return '';
+		}
+	</script>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
