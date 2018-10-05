@@ -1,4 +1,4 @@
-# games
+# Vue.js app
 
 ## Project setup
 ```
