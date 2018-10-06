@@ -29,8 +29,6 @@ export default {
 </script>
 
 <style>
-/* @import "https://bootswatch.com/4/sketchy/bootstrap.min.css";
-@import "https://bootswatch.com/4/lux/bootstrap.min.css"; */
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

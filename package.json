@@ -1,12 +1,14 @@
 {
   "name": "simonredd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-	"lint": "vue-cli-service lint"
+	"lint": "vue-cli-service lint",
+	"deploy": "npm run build && surge build simonreddit.surge.sh"
   },
+  "proxy": "https://infinite-meadow-59034.herokuapp.com/",
   "dependencies": {
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
