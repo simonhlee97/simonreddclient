@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
 	"lint": "vue-cli-service lint",
-	"deploy": "npm run build && surge build simonreddit.surge.sh"
+	"deploy": "npm run build && surge dist simonreddit.surge.sh"
   },
   "proxy": "https://infinite-meadow-59034.herokuapp.com/",
   "dependencies": {
