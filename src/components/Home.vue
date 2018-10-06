@@ -18,7 +18,8 @@
 </template>
  
 <script>
-const API_URL = "http://localhost:4000/messages";
+// const API_URL = "http://localhost:4000/messages";
+const API_URL = "https://infinite-meadow-59034.herokuapp.com/messages";
  
 export default {
   name: "Home",
