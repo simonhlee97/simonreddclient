@@ -20,7 +20,7 @@
 
 <script>
 // const API_URL = "http://localhost:4000/tech";
-const API_URL = "https://infinite-meadow-59034.herokuapp.com/messages";
+const API_URL = "https://infinite-meadow-59034.herokuapp.com/tech";
  
 export default {
   name: "Tech",
