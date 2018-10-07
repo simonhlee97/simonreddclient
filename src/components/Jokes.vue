@@ -19,7 +19,9 @@
 </template>
 
 <script>
-const API_URL = "http://localhost:4000/jokes";
+// const API_URL = "http://localhost:4000/jokes";
+const API_URL = "https://infinite-meadow-59034.herokuapp.com/jokes";
+
  
 export default {
   name: "Jokes",

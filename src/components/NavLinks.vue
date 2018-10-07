@@ -9,7 +9,6 @@
 			<li><router-link to="/tech">Tech</router-link></li>
 			<li><router-link to="/games">Games</router-link></li>
 			<li><router-link to="/jokes">Funny/Jokes</router-link></li>
-
 		</ul>
 	</div>
 </template>

@@ -17,9 +17,6 @@ import Title from './components/Title.vue'
 import Footer from './components/Footer.vue'
 import NavLinks from './components/NavLinks.vue'
 
-
-
-
 export default {
   name: 'app',
   components: {

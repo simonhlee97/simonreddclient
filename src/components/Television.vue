@@ -19,8 +19,9 @@
 </template>
 
 <script>
-const API_URL = "http://localhost:4000/television";
- 
+// const API_URL = "http://localhost:4000/television";
+const API_URL = "https://infinite-meadow-59034.herokuapp.com/television";
+
 export default {
   name: "Television",
   data: () => ({

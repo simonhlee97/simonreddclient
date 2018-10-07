@@ -19,15 +19,14 @@
 </template>
 
 <script>
-const API_URL = "http://localhost:4000/sports";
- 
+// const API_URL = "http://localhost:4000/sports";
+const API_URL = "https://infinite-meadow-59034.herokuapp.com/sports";
 export default {
   name: "Sports",
   data: () => ({
     error: "",
     sports: []
   }),
- 
   mounted() {
     fetch(API_URL)
       .then(response => response.json())
