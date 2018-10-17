@@ -15,37 +15,38 @@
           id="username" placeholder="Your username" required>
       </div>
 
-	<div class="form-group">
-		<label for="subject">Topic</label>
-		<select class="custom-select" v-model="message.subject" id="subject" required>
-			<option value="" selected disabled hidden>Choose Topic</option>
-			<option value="movies">Movies</option>
-			<option value="music">Music</option>
-			<option value="television">Television</option>
-			<option value="sports">Sports</option>
-			<option value="tech">Tech</option>
-			<option value="games">Games</option>
-			<option value="jokes">Funny/Jokes</option>
-		</select>
-	</div>
+		<div class="form-group">
+			<label for="subject">Topic</label>
+			<select class="custom-select" v-model="message.subject" id="subject" required>
+				<option value="" selected disabled hidden>Choose Topic</option>
+				<option value="movies">Movies</option>
+				<option value="music">Music</option>
+				<option value="television">Television</option>
+				<option value="sports">Sports</option>
+				<option value="tech">Tech</option>
+				<option value="games">Games</option>
+				<option value="jokes">Funny/Jokes</option>
+			</select>
+		</div>
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea
-          v-model="message.message"
-          class="form-control"
-          id="message"
-          rows="3"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="imageURL">Image URL</label>
-        <input
-          v-model="message.imageURL"
-          type="url"
-          class="form-control"
-          id="imageURL"
-          placeholder="Enter URL to an image">
-      </div>
+		<div class="form-group">
+			<label for="message">Message</label>
+			<textarea
+				v-model="message.message"
+				class="form-control"
+				id="message"
+				rows="3">
+			</textarea>
+		</div>
+    	<div class="form-group">
+        	<label for="imageURL">Image URL</label>
+        	<input
+				v-model="message.imageURL"
+				type="url"
+				class="form-control"
+				id="imageURL"
+				placeholder="Enter URL to an image">
+      	</div>
       <button type="submit" class="btn btn-primary">Post</button>
     </form>
     
@@ -56,7 +57,6 @@
 // const API_URL = "http://localhost:4000/messages";
 const API_URL = "https://infinite-meadow-59034.herokuapp.com/messages";
 
- 
 export default {
   name: "Create",
   data: () => ({

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id="footer">
 	
 	<h3>Links, Resources</h3>
 
@@ -9,7 +9,7 @@
 		<li><a href="https://www.bootswatch.com/" target="_blank" rel="noopener">Bootswatch</a></li>
 		<li><a href="https://news.vuejs.org" target="_blank" rel="noopener">VueJS News</a></li>
 	</ul>
-	<p>Last Modified on: {{ date() }}</p>
+	<p>Last Modified on: October 16, 2018</p>
 	<p>Try out more Bootswatch Themes below</p>
 	<form>
 		<li><input type="submit" class="btn btn-success" onclick="switch_style('blue');return false;" name="theme" value="Lux" id="blue"></li>
@@ -26,15 +26,11 @@
 <script>
 	export default {
 		name: 'Footer',
-		methods: {
-			date: function() {
-				return document.lastModified
-			}
-		},
-		
 	}
 </script>
 
 <style scoped>
-
+#footer {
+	margin-bottom: 3em;
+}
 </style>
